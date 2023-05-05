@@ -1,0 +1,511 @@
+/*** General ***/
+
+*{
+    font-family: roboto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.main_container{
+    width: 100%;
+    min-width: 320px;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: ;
+    --main-bg-color: #F6F6F6;
+    --second-bg-color: #FFFFFF;
+    --card-bg-color: #FFFFFF;
+    --text-color: #000000;
+    --second-text-color: #FFFFFF;
+    --location-bg-color: #EAEAEA;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*** Header ***/
+
+.header{
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.logo{
+    font-family: Shrikhand;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/*** Loader ***/
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text-color);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 1s 3s forwards;
+}
+
+.loader_text{
+    color: #9356DC;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 1000;
+    text-align: center;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top: 5px solid #9356DC;
+    border-right: 5px solid #FF79DA;
+    border-bottom: 5px solid #99E2D0;
+    border-left: 5px solid transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/*** Location ***/
+
+.location{
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--location-bg-color);
+}
+
+.fa-location-dot{
+    width: 12px;
+    height: 16px;
+    color: black;
+    background-color: var(--location-bg-color);
+}
+
+.location p{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--location-bg-color);
+}
+
+/*** Menu ***/
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 57px;
+    padding-top: 39.5px;
+    background-color: var(--main-bg-color);
+}
+
+.menu h2{
+    width: 73%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 28px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.menu p{
+    width: 84%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 21px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.menu_button{
+    width: 218px;
+    height: 50px;
+    margin-top: 27px;
+    background: linear-gradient(180deg,#FF79DA,#9356DC);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_button:hover{
+    background : linear-gradient(180deg,#ff8ade,#9f6cdd);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
+    transform: scale(1.01);
+    transition: 400ms ease;
+}
+
+
+/*** Functioning ***/
+
+.functioning{
+    padding: 48px 20px 68px 20px;
+}
+
+.functionning_container{
+    width: 100%
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.article{
+    display: flex;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 11px;
+    margin-left: 12px;
+    align-items: baseline;
+}
+
+.circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #9356DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    left: -24px;
+}
+
+.functioning_text{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.fa-mobile-screen-button{
+    color: #7E7E7E;
+    margin-right: 27px;
+}
+
+.fa-list-ul{
+    color: #7E7E7E;
+    margin-right: 23px;
+}
+
+.fa-store{
+    color: #9356DC;
+    margin-right: 20px;
+}
+
+/*** Restaurants ***/
+
+.restaurants{
+    background-color: var(--main-bg-color);
+    padding: 54px 15px 66px 14px;
+    margin: auto;
+}
+
+.restaurants_container{
+    width: 100%;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.card{
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 251px;
+}
+
+.restaurant_img{
+    height: 69%;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 15px 15px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.card_badge{
+    background-color: #99e2d0;
+    color: #008766;
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;  
+    right: 0.75rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card_content{
+    height: 31%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px 0 13px;
+}
+
+.card_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_title{
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.card_subtitle{
+    margin: 0;
+}
+
+/*** Heart ***/
+
+.heart_container{
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    width: 22px;
+    height: 21px;
+}
+
+.heart_container img{
+    width: 100%;
+    position: absolute;
+}
+
+.cards .transparant_heart {
+    border-radius: inherit;
+    box-shadow: none;
+    border: none;
+    object-fit: unset;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cards .color_heart {
+    border-radius: inherit;
+    box-shadow: none;
+    border: none;
+    object-fit: unset;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.heart_container:hover .transparant_heart{
+    opacity: 0;
+}
+
+.heart_container:hover .color_heart{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*** Footer ***/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #353535;
+    padding: 22px 0 22px 25px;
+}
+
+.footer_logo{
+    font-family: shrikhand;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--second-bg-color);
+    padding-bottom: 16px;
+}
+
+.footer_links{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--second-text-color);
+}
+
+.footer_links a{
+    color: var(--second-text-color);
+    display: flex;
+    gap: 7px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pro{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+/*** MISE EN PLACE DU RESPONSIVE ***/
+
+@media (min-width: 768px) {
+
+/*** General ***/
+
+    .main_container{
+        max-width: 1440px;
+    }
+
+/*** Menu ***/
+
+    .menu h2{
+        line-height: 47px;
+        padding-bottom: 18px;
+        font-size: 40px;
+    }
+
+ /*** Restaurants ***/
+
+    .restaurants{
+        display: flex;
+        justify-content: center;
+    }
+
+    .restaurants_container{
+        width: 75%;
+    }
+ 
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5.5rem;
+        row-gap: 3rem;
+    }
+
+/*** Footer ***/
+
+    footer{
+        height: 114px;
+        position: relative;
+        padding: 0;
+    }
+
+    .footer_logo{
+        padding-bottom: 0;
+        width: 137px;
+        position: absolute;
+        right: 26px;
+        bottom: 30px;
+    }
+
+    .footer_links{
+        flex-direction: row;
+        position: absolute;
+        right: 180px;
+        bottom: 30px;
+    }
+
+    .pro{
+        width: 387px;
+        flex-direction: row;
+    }
+
+    .help{
+        width: 260px;
+        flex-direction: row;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+/*** Functionning ***/
+
+    .functioning{
+        display: flex;
+        justify-content: center;
+    }
+
+    .functionning_container{
+        width: 75%
+    }
+
+    .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article{
+        width: 31.5%;
+    }
+}
