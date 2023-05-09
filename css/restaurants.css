@@ -282,13 +282,12 @@ a{
     border-radius: 0px 15px 15px 0px;
     transform: translateX(100%);
     visibility: hidden;
-    transition: transform 400ms, visibility 0s 400ms;
+    transition: transform 400ms;
 }
 
 .card:hover .check_icon_anim {
     transform: translateX(0);
     visibility: visible;
-    transition: transform 400ms, visibility 0s;
 }
 
 .check_icon_anim::before {
